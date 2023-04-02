@@ -1,0 +1,196 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+  
+  }
+  
+  header {
+    text-align: center;
+    margin-right: 10px;
+    margin-right: 10px;
+    background-color:  rgb(173, 240, 225);
+    color:  rgb(173, 240, 225);
+    text-decoration:dotted;
+  }
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    background-color: rgb(173, 240, 225);
+    color: rgb(116, 115, 117);
+    font-size: 4rem;
+
+
+}
+
+/* section{
+    justify-content: space-between;
+} */
+
+.pos-relative img {
+    position: relative;
+    width: 100%;
+    top: 10px;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.pos-absolute {
+    position: absolute;
+    top: 10px; left: 10px;
+    font-size: 4rem;
+    color: rgb(241, 238, 245);
+}
+
+
+div.parallax {
+    margin: 20px;
+    border: 1px solid black;
+}
+
+
+@media only screen and (min-width:601px) {
+    .parallax {
+        background-image: url("images/monteBatu.JPG");
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+@media only screen and (min-width:601px) {
+    .parallax_2 {
+        background-image: url("images/sailling.jpg");
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+
+@media only screen and (min-width:601px) {
+    .parallax_1 {
+        background-image: url("images/inTheOcean.jpg");
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+
+@media only screen and (max-width:600px) {
+    .parallax {
+        background-image: url("images/monteBatu.JPG");
+        min-height: 400px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+
+nav {
+    overflow: hidden;
+    background-color: rgb(173, 240, 225);
+}
+
+nav a {
+    float: right;
+    font-size: 16px;
+    color: rgb(115, 117, 117);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgb(173, 240, 225);
+}
+
+
+/* .dropdown {
+    float: right;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(115, 117, 117);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(173, 240, 225);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(173, 240, 225);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #167569;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+} */
+
+
+section {
+    margin: 50px 0;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(173, 240, 225);
+    padding: 10px 10px;
+    color: rgb(115, 117, 117);
+}
