@@ -136,7 +136,7 @@ nav a:hover,
 }
 
 
-/* .dropdown {
+.dropdown {
     float: right;
     overflow: hidden;
     margin-right: 50px;
@@ -176,17 +176,52 @@ nav a:hover,
 
 .dropdown:hover .dropdown-content {
     display: block;
-} */
+}
 
 
 section {
     margin: 50px 0;
+    text-align: center;
 }
 
 
 h2 {
     margin-bottom: 20px;
 }
+
+.pos-absolute {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+.pos-absolute.div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pos-absolute div:hover {
+    color: aquamarine;
+    transform: scale(1.5) rotate(10deg);
+}
+/* 
+.poema:first-of-type .verso:first-of-type {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.poema:last-of-type .verso:last-of-type {
+    font-style: italic;
+}
+
+.poema:nth-of-type(2) .verso:nth-child(2) {
+    color: grey;
+} */
+
 
 footer {
     text-align: center;
