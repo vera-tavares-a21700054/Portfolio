@@ -12,17 +12,21 @@
 body {
     height: 100%;
     width: 100%;
-  
-  }
-  
-  header {
+
+}
+
+header {
     text-align: center;
     margin-right: 10px;
     margin-right: 10px;
-    background-color:  rgb(173, 240, 225);
-    color:  rgb(173, 240, 225);
-    text-decoration:dotted;
-  }
+    background-color: rgb(173, 240, 225);
+    color: rgb(173, 240, 225);
+    text-decoration: dotted;
+}
+
+.menu-large {
+    padding: 1rem 0rem;
+}
 
 .flex-container {
     display: flex;
@@ -53,7 +57,8 @@ body {
 
 .pos-absolute {
     position: absolute;
-    top: 10px; left: 10px;
+    top: 10px;
+    left: 10px;
     font-size: 4rem;
     color: rgb(241, 238, 245);
 }
@@ -65,7 +70,9 @@ div.parallax {
 }
 
 
+
 @media only screen and (min-width:601px) {
+
     .parallax {
         background-image: url("images/monteBatu.JPG");
         min-height: 400px;
@@ -75,9 +82,6 @@ div.parallax {
         background-size: cover;
     }
 
-}
-
-@media only screen and (min-width:601px) {
     .parallax_2 {
         background-image: url("images/sailling.jpg");
         min-height: 400px;
@@ -87,10 +91,6 @@ div.parallax {
         background-size: cover;
     }
 
-}
-
-
-@media only screen and (min-width:601px) {
     .parallax_1 {
         background-image: url("images/inTheOcean.jpg");
         min-height: 400px;
@@ -102,8 +102,54 @@ div.parallax {
 
 }
 
+.menu-mobile {
+    display: none;
+}
 
-@media only screen and (max-width:600px) {
+
+
+@media only screen and (max-width:640px) {
+    nav {
+        justify-content: start !important;
+    }
+
+    .burguer-menu {
+        display: block;
+        width: 2.2rem;
+        position: relative;
+    }
+
+    .burguer-menu .center{
+        border: 2px solid black;
+        width: 90%;
+        display: block;
+        position: absolute;
+        top: 49%;
+    }
+
+    .burguer-menu::before {
+        content: "";
+        border: 2px solid black;
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .burguer-menu::after {
+        content: "";
+        border: 2px solid black;
+        width: 100%;
+        display: block;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu-large {
+        display: none;
+    }
+
     .parallax {
         background-image: url("images/monteBatu.JPG");
         min-height: 400px;
@@ -119,10 +165,11 @@ div.parallax {
 nav {
     overflow: hidden;
     background-color: rgb(173, 240, 225);
+    display: flex;
+    justify-content: end;
 }
 
 nav a {
-    float: right;
     font-size: 16px;
     color: rgb(115, 117, 117);
     text-align: center;
@@ -208,6 +255,7 @@ h2 {
     color: aquamarine;
     transform: scale(1.5) rotate(10deg);
 }
+
 /* 
 .poema:first-of-type .verso:first-of-type {
     font-size: 30px;
@@ -222,6 +270,62 @@ h2 {
     color: grey;
 } */
 
+
+main {
+    height: 100vh;
+    background-image: url(images/vida_academica_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(212, 247, 239);
+    text-align: center;
+    color: #167569;
+}
+
+h1 {
+    position: absolute;
+    top: 15vh;
+    width: 100%;
+}
+  
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    color: white;
+}
+
+th {
+    text-align: center;
+}
+
+table td.aprovado:before {
+    content: "✅";
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.header-tr {
+    font-weight: bold;
+}
+
+.tabela1ano, .tabela2ano, .tabela3ano {
+    display: inline-block;
+    width: 50wh;
+    vertical-align: top;
+    margin-right: 2%;
+    margin-top: 15vh;
+    background-color: #28282B;
+    opacity: 0.9;
+}
+  
+.tabela3ano {
+  margin-right: 0;
+}
 
 footer {
     text-align: center;
