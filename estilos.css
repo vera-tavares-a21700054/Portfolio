@@ -313,7 +313,7 @@ table td.aprovado:before {
     font-weight: bold;
 }
 
-.tabela1ano, .tabela2ano, .tabela3ano {
+.tabela1ano, .tabela2ano, .tabela3ano, .tabelaProjectos {
     display: inline-block;
     width: 50wh;
     vertical-align: top;
@@ -326,6 +326,11 @@ table td.aprovado:before {
 .tabela3ano {
   margin-right: 0;
 }
+
+.tabelaProjectos {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
 
 footer {
     text-align: center;
