@@ -124,16 +124,16 @@
     // Verifica se há escolha armazenada no localStorage
     const mode = localStorage.getItem('mode');
     if (mode === 'dark') {
-        linkElement.setAttribute('href', 'css/geral-dark.css');
+        linkElement.setAttribute('href', 'estilos_dark.css');
         modeSwitch.checked = true;
     }
 
     modeSwitch.addEventListener('click', () => {
-        if (linkElement.getAttribute('href') === 'css/geral-light.css') {
-            linkElement.setAttribute('href', 'css/geral-dark.css');
+        if (linkElement.getAttribute('href') === 'estilos.css') {
+            linkElement.setAttribute('href', 'estilos_dark.css');
             localStorage.setItem('mode', 'dark');
         } else {
-            linkElement.setAttribute('href', 'css/geral-light.css');
+            linkElement.setAttribute('href', 'estilos.css');
             localStorage.setItem('mode', 'light');
         }
     });
