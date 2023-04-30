@@ -12,8 +12,10 @@
 body {
     height: 100%;
     width: 100%;
+    background-color:rgb(222, 248, 242) ;
+    overflow-y: scroll;
+    }
 
-}
 
 header {
     text-align: center;
@@ -23,6 +25,93 @@ header {
     color: rgb(173, 240, 225);
     text-decoration: dotted;
 }
+
+
+nav {
+    position: relative;
+    z-index: 1;
+}
+
+nav ul,
+nav li,
+nav a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(173, 240, 225);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    display: block;
+    position: relative;
+    background-color:rgb(173, 240, 225);
+}
+
+
+/* Top-level menu links */
+nav ul li a {
+    display: block;
+    padding: 1em;
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+
+/* Change color on hover */
+nav ul li a:hover {
+    color: black;
+    background-color: darkgray;
+    content: "▸";
+}
+
+/* Sub-menu */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(173, 240, 225);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+nav ul ul li {
+    width: 100%;
+}
+
+nav ul ul li a {
+    display: block;
+    padding: 0.5em 1em;
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+nav ul ul li a:hover {
+    color: #28282B;
+}
+
+nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
 
 .menu-large {
     padding: 1rem 0rem;
@@ -41,9 +130,6 @@ header {
 
 }
 
-/* section{
-    justify-content: space-between;
-} */
 
 .pos-relative img {
     position: relative;
@@ -72,6 +158,7 @@ div.parallax {
 
 
 @media only screen and (min-width:601px) {
+ 
 
     .parallax {
         background-image: url("images/monteBatu.JPG");
@@ -117,7 +204,11 @@ div.parallax {
 
 
 
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:600px) {
+    body {
+        font-size: 0.5em;
+    }
+
     nav {
         justify-content: start !important;
     }
@@ -128,7 +219,7 @@ div.parallax {
         position: relative;
     }
 
-    .burguer-menu .center{
+    .burguer-menu .center {
         border: 2px solid black;
         width: 90%;
         display: block;
@@ -171,76 +262,12 @@ div.parallax {
 }
 
 
-nav {
-    overflow: hidden;
-    background-color: rgb(173, 240, 225);
-    display: flex;
-    justify-content: end;
-}
-
-nav a {
-    font-size: 16px;
-    color: rgb(115, 117, 117);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav a:hover,
-.dropdown:hover .dropbtn {
-    background-color: rgb(173, 240, 225);
-}
-
-
-.dropdown {
-    float: right;
-    overflow: hidden;
-    margin-right: 50px;
-}
-
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: rgb(115, 117, 117);
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(173, 240, 225);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(173, 240, 225);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #167569;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
 section {
     margin: 50px 0;
     text-align: center;
 }
 
-#contactos{
+#contactos {
     justify-content: space-between;
 }
 
@@ -268,32 +295,17 @@ h2 {
     transform: scale(1.5) rotate(10deg);
 }
 
-/* 
-.poema:first-of-type .verso:first-of-type {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.poema:last-of-type .verso:last-of-type {
-    font-style: italic;
-}
-
-.poema:nth-of-type(2) .verso:nth-child(2) {
-    color: grey;
-} */
-
 
 main {
     height: 100vh;
     background-image: url(images/vida_academica_1.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-color: rgb(212, 247, 239);
     text-align: center;
-    color: #167569;
+    color: black;
 }
 
 h1 {
@@ -301,9 +313,10 @@ h1 {
     top: 15vh;
     width: 100%;
 }
-  
 
-th, td {
+
+th,
+td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
@@ -325,7 +338,10 @@ table td.aprovado:before {
     font-weight: bold;
 }
 
-.tabela1ano, .tabela2ano, .tabela3ano, .tabelaProjectos {
+.tabela1ano,
+.tabela2ano,
+.tabela3ano,
+.tabelaProjectos {
     display: inline-block;
     width: 50wh;
     vertical-align: top;
@@ -334,15 +350,95 @@ table td.aprovado:before {
     background-color: #28282B;
     opacity: 0.9;
 }
-  
+
 .tabela3ano {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .tabelaProjectos {
     margin-right: 12rem;
     margin-left: 12rem;
-  }
+}
+
+.toggle {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.toggle input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #ccc;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.sun {
+    left: 5px;
+}
+
+.moon {
+    right: 5px;
+}
+
+i {
+    color: black;
+}
+
+a i {
+    color: white;
+}
 
 footer {
     text-align: center;

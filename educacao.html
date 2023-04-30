@@ -3,7 +3,6 @@
 
 <head>
     <title>Vera Tavares</title>
-    <meta name="viewport" content="width=device width, initial scale=1.0">
     <meta charset="utf-8">
     <meta name="author" content="Vera Tavares">
     <meta name="description" content="Portfolio">
@@ -12,45 +11,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e6cbf3d2b.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="hero">
     <div class="wrapper">
         <header>
             <nav>
-                <div class="menu-large">
-                    <a href="index.html">Home</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a>Educação</a>
+                        <ul>
+                            <li><a href="educacao.html">Percurso Académico</a></li>
+                            <li><a href="licenciatura.html">Licenciatura</a></li>
+                            <li><a href="outrasCompetencias.html">Outras Competências</a></li>
+                            <li><a href="projectosDesenvolvidos.html">Projectos Desenvolvidos</a></li>
+                            <li><a href="laboratoriosRealizados.html">Laboratórios Realizados</a>
+                                <ul>
+                                    <li><a href="lab2/index.html">Lab2</a></li>
+                                    <li><a href="lab3/index.html">Lab3</a></li>
+                                    <li><a href="a21700054-pw-lab4/index.html">Lab4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="experienciaProfissional.html">Experiência Profissional</a></li>
+                    <li><a href="playground.html">Experimente Você Mesmo!</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+                <div class="toggle-container">
+                    <label class="toggle">
+                        <input type="checkbox" id="mode-toggle">
+                        <span class="slider"></span>
+                        <span class="icon sun"><i class="fas fa-sun"></i></span>
+                        <span class="icon moon"><i class="fas fa-moon"></i></span>
+                    </label>
+                </div>
+            </nav>
+
+            <!-- <div class="menu-mobile">
                     <div class="dropdown">
-                        <button class="dropbtn"> Educação
+                        <button class="dropbtn">
+                            <span class="burguer-menu">
+                                <span class="center"></span>
+                            </span>
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="dropdown-content">
-                            <a href="#educacao">Educação</a>
-                            <a href="licenciatura.html">Licenciatura</a>
-                            <a href="outrasCompetencias.html">Outras Competências</a>
-                            <a href="projectosDesenvolvidos.html">Projectos Desenvolvidos</a>
-                        </div>
-                        <a href="experienciaProfissional.html" id="menu">Experiência Profissional</a>
-                        <a href="contactos.html">Contactos</a>
-                    </div>
-                </div>
-
-                    <div class="menu-mobile">
-                        <div class="dropdown">
-                            <button class="dropbtn">
-                                <span class="burguer-menu">
-                                    <span class="center"></span>
-                                </span>
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="index.html">Home</a>
-                                <a href="educacao.html" id="menu">Educação</a>
-                                <a href="experienciaProfissional.html" id="menu">Experiência Profissional</a>
-                                <a href="contactos.html">Contactos</a>
+                            <a href="index.html">Home</a>
+                            <a href="educacao.html" id="menu">Educação</a>
+                            <div class="dropdown">
+                                <div class="dropdown-content">
+                                    <a href="licenciatura.html">Licenciatura</a>
+                                    <a href="outrasCompetencias.html">Outras Competências</a>
+                                    <a href="projectosDesenvolvidos.html">Projectos Desenvolvidos</a>
+                                </div>
                             </div>
+                            <a href="experienciaProfissional.html" id="menu">Experiência Profissional</a>
+                            <a href="contactos.html">Contactos</a>
                         </div>
                     </div>
+                </div> -->
             </nav>
         </header>
     </div>
@@ -87,12 +108,33 @@
         </div>
     </section>
 
-   
-
     <br>
     <br>
     <footer> <img src="images/ulht.PNG" alt="ULHT"> ULHT - Universidade Lusófona de Humanidades e Tecnologias | Vera
         Tavares | a21700054 | 2023</footer>
 </body>
+
+
+<script>
+    const modeSwitch = document.getElementById('mode-toggle');
+    const linkElement = document.querySelector('link[href="estilos.css"]');
+
+    // Verifica se há escolha armazenada no localStorage
+    const mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+        linkElement.setAttribute('href', 'css/geral-dark.css');
+        modeSwitch.checked = true;
+    }
+
+    modeSwitch.addEventListener('click', () => {
+        if (linkElement.getAttribute('href') === 'css/geral-light.css') {
+            linkElement.setAttribute('href', 'css/geral-dark.css');
+            localStorage.setItem('mode', 'dark');
+        } else {
+            linkElement.setAttribute('href', 'css/geral-light.css');
+            localStorage.setItem('mode', 'light');
+        }
+    });
+</script>
 
 </html>

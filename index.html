@@ -3,7 +3,6 @@
 
 <head>
     <title>Vera Tavares</title>
-    <meta name="viewport" content="width=device width, initial scale=1.0">
     <meta charset="utf-8">
     <meta name="author" content="Vera Tavares">
     <meta name="description" content="Portfolio">
@@ -12,43 +11,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e6cbf3d2b.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="hero">
     <div class="wrapper">
         <header>
             <nav>
-                <div class="menu-large">
-                    <a href="index.html">Home</a>
-                    <a href="educacao.html" id="menu">Educação</a>
-                    <!-- <div class="dropdown">
-                        <button class="dropbtn"> Educação
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="educacao.html/#educacao">Educação</a>
-                            <a href="educacao.html/#competencias">Outras Competências</a>
-                        </div>
-                    </div> -->
-                    <a href="experienciaProfissional.html" id="menu">Experiência Profissional</a>
-                    <a href="contactos.html">Contactos</a>
-                </div>
-                
-                <div class="menu-mobile">
-                    <div class="dropdown">
-                        <button class="dropbtn"> 
-                            <span class="burguer-menu">
-                                <span class="center"></span>
-                            </span>
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="index.html">Home</a>
-                            <a href="educacao.html" id="menu">Educação</a>
-                            <a href="experienciaProfissional.html" id="menu">Experiência Profissional</a>
-                            <a href="contactos.html">Contactos</a>
-                        </div>
-                    </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a>Educação</a>
+                        <ul>
+                            <li><a href="educacao.html">Percurso Académico</a></li>
+                            <li><a href="licenciatura.html">Licenciatura</a></li>
+                            <li><a href="outrasCompetencias.html">Outras Competências</a></li>
+                            <li><a href="projectosDesenvolvidos.html">Projectos Desenvolvidos</a></li>
+                            <li><a>Laboratórios Realizados</a>
+                                <ul>
+                                    <li><a href="lab2/index.html" target="_blank">Lab2</a></li>
+                                    <li><a href="lab3/index.html" target="_blank">Lab3</a></li>
+                                    <li><a href="a21700054-pw-lab4/index.html" target="_blank">Lab4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="experienciaProfissional.html">Experiência Profissional</a></li>
+                    <li><a href="playground.html">Experimente Você Mesmo!</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+                <div class="toggle-container">
+                    <label class="toggle">
+                        <input type="checkbox" id="mode-toggle">
+                        <span class="slider"></span>
+                        <span class="icon sun"><i class="fas fa-sun"></i></span>
+                        <span class="icon moon"><i class="fas fa-moon"></i></span>
+                    </label>
                 </div>
             </nav>
         </header>
@@ -117,9 +114,15 @@
                 <p>Quando ganhar o euromilhões, nunca mais diz bom dia! (pois detesta acordar cedo) 🤪</p>
                 <p>Já tem todo um plano de acção preparado para quando o prémio lhe sair!🤩 </p>
             </div>
-
-
         </div>
+    </section>
+    <section>
+        <figure>
+            <iframe width="315" height="560" src="images/video1.mp4" title="myVideo" frameborder="4px"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </figure>
+        <span style="color:black; font-weight:bold; font-size: 1.5em;">Make a Wish!</span>
     </section>
 
     <br>
@@ -127,5 +130,38 @@
     <footer><img src="images/ulht.PNG" alt="ULHT"> ULHT - Universidade Lusófona de Humanidades e Tecnologias | Vera
         Tavares | a21700054 | 2023 </footer>
 </body>
+
+
+<script>
+    const modeSwitch = document.getElementById('mode-toggle');
+    const linkElement = document.querySelector('link[href="estilos.css"]');
+
+    // Verifica se há escolha armazenada no localStorage
+    const mode = localStorage.getItem('mode');
+    if (mode === 'dark') {
+        linkElement.setAttribute('href', 'estilos_dark.css');
+        modeSwitch.checked = true;
+    }
+
+    modeSwitch.addEventListener('click', () => {
+        if (linkElement.getAttribute('href') === 'estilos.css') {
+            linkElement.setAttribute('href', 'estilos_dark.css');
+            localStorage.setItem('mode', 'dark');
+        } else {
+            linkElement.setAttribute('href', 'estilos.css');
+            localStorage.setItem('mode', 'light');
+        }
+    });
+
+    window.addEventListener('load', function () {
+        var labLinks = document.querySelectorAll('#laboratorios realizados a');
+        for (var i = 0; i < labLinks.length; i++) {
+            labLinks[i].setAttribute('target', '_blank');
+        }
+    });
+
+</script>
+
+
 
 </html>
