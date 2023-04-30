@@ -27,11 +27,11 @@
                             <li><a href="outrasCompetencias.html">Outras Competências</a></li>
                             <li><a href="projectosDesenvolvidos.html">Projectos Desenvolvidos</a></li>
                             <li><a href="laboratoriosRealizados.html">Laboratórios Realizados</a></li>
-                            <li><a href="laboratoriosRealizados.html">Laboratórios Realizados</a>
+                            <li><a>Laboratórios Realizados</a>
                                 <ul>
-                                    <li><a href="lab2/index.html">Lab2</a></li>
-                                    <li><a href="lab3/index.html">Lab3</a></li>
-                                    <li><a href="a21700054-pw-lab4/index.html">Lab4</a></li>
+                                    <li><a href="http://veratavares.pythonanywhere.com/"  target="_blank">Lab2</a></li>
+                                    <li><a href="http://a21700054vera.pythonanywhere.com/" target="_blank">Lab3</a></li>
+                                    <li><a href="https://vt21700054.pythonanywhere.com/a21700054-pw-lab4/" target="_blank">Lab4</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -55,8 +55,8 @@
 
     <br>
     <br>
-    <footer> <img src="images/ulht.PNG" alt="ULHT"> ULHT - Universidade Lusófona de Humanidades e Tecnologias | Vera
-        Tavares | a21700054 | 2023</footer>
+    <footer><img src="images/ulht.PNG" alt="ULHT"> ULHT - Universidade Lusófona de Humanidades e Tecnologias | Vera
+        Tavares | a21700054 | 2023 | <a href="images/Mapa_do_Site_2.png" target="_blank">Mapa do Site</a></footer>
 </body>
 
 
@@ -80,6 +80,14 @@
         localStorage.setItem('mode', 'light');
       }
     });
+
+    window.addEventListener('load', function () {
+        var labLinks = document.querySelectorAll('#laboratorios realizados a');
+        for (var i = 0; i < labLinks.length; i++) {
+            labLinks[i].setAttribute('target', '_blank');
+        }
+    });
+
 </script>
 
 </html>

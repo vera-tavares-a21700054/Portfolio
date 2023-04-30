@@ -4,7 +4,6 @@
 }
 
 body {
-  background-image: url(/images/sun_discs.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -87,7 +86,7 @@ h2 {
   font-size: 24px;
   font-weight: bold;
   transition: opacity 0.5s ease-in-out;
-  background-color: grey;
+  background-color: rgb(168, 167, 167);
 }
 
 @keyframes spin {
@@ -104,9 +103,9 @@ h2 {
   flex-direction: column;
   align-items: center;
   border: 1px solid #ccc;
-  border-radius: 20px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 7px;
   margin: 10px;
   line-height: 1.5;
 }
@@ -130,7 +129,7 @@ h2 {
     margin-right: 10px;
     padding: 5px 10px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #1ca77d;
     color: white;
     border: none;
     border-radius: 5px;
@@ -191,7 +190,7 @@ h2 {
     z-index: 1;
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: rgb(135, 139, 137);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
